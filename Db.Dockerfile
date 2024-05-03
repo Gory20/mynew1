@@ -5,4 +5,4 @@ FROM mysql:5.7
 ENV MYSQL_ROOT_PASSWORD=root
 
 # Ajouter le script SQL qui initialise la base de données
-ADD base_de_donnee/init.sql /docker-entrypoint-initdb.d/
+ADD init.sql /docker-entrypoint-initdb.d/

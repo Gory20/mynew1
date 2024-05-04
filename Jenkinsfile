@@ -36,11 +36,11 @@ pipeline {
         success {
             // Nettoyer les ressources Docker
             bat'docker-compose down -v'
-            emailext body: 'Resultat du build: Success', subject: 'Detail du Build', to: 'ndiaye58amadou@gmail.com'
+            emailext body: 'coach pas de 6iem : Success', subject: 'Detail du Build', to: 'ndiaye58amadou@gmail.com'
 
         }
         failure {
-            emailext body: 'Resultat du build: Echec', subject: 'Detail du Build', to: 'ndiaye58amadou@gmail.com'
+            emailext body: 'coach pas de 6iem: Echec', subject: 'Detail du Build', to: 'ndiaye58amadou@gmail.com'
         }
     }
 }

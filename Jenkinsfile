@@ -8,9 +8,9 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'docker --version' // Vérifier que Docker est accessible
+                    bat 'docker --version' // Vérifier que Docker est accessible
                     // Lancement de Docker Compose
-                    sh 'docker-compose up -d --build'
+                    bat 'docker-compose up -d --build'
                 }
             }
         }
@@ -35,7 +35,7 @@ pipeline {
     post {
         success {
             // Nettoyer les ressources Docker
-            sh 'docker-compose down -v'
+            bat'docker-compose down -v'
             emailext body: 'Resultat du build: Success', subject: 'Detail du Build', to: 'ndiaye58amadou@gmail.com'
 
         }

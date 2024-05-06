@@ -40,7 +40,7 @@ pipeline {
 
         }
         failure {
-            emailext body: 'Resultat du build: Echec', subject: 'Detail du Build', to: 'gorisowrg9@gmail.com'
+            emailext body: 'coach pas de 6iem: Echec', subject: 'Detail du Build', to: 'gorisowrg9@gmail.com'
         }
     }
 }

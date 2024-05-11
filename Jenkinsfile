@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_COMPOSE_VERSION = '1.29.2'
+        DOCKER_COMPOSE_VERSION = '2.27.0'
         PATH = "/usr/local/bin:$PATH" // Assurez-vous que cela inclut le chemin vers Docker
     }
     stages {
